@@ -50,8 +50,8 @@ export default async function (content: Buffer) {
   const imgUrls = {
     '@1x': { url, outputPath },
   }
-
-  this.emitFile(outputPath, content)
+  const fileContent1 = await readFileAsync(this.resourcePath])
+  this.emitFile(outputPath, fileContent1)
 
   try {
     const resolvedFiles = await resolveScaledImages(this.resourcePath, scalings)
